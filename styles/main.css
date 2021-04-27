@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  display: grid;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
+h5 {
+  color: white;
+}
+
+span {
+  background-color: #6290c8;
+  z-index: 100;
+}
+
+@media( max-width: 767px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+ 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 80px;
+  }s
+}
