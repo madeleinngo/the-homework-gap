@@ -25,14 +25,14 @@ span {
   z-index: 100;
 }
 
-@media( max-width: 767px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 48px;
   }
 }
- 
+
 @media (min-width: 768px) {
   h1 {
     font-size: 80px;
-  }s
+  }
 }
