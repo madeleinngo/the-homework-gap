@@ -25,17 +25,52 @@ h5 {
   color: white;
 }
 
+/* Highlight Effect */
 .highlight {
-  background-color: #6290c8;
-  z-index: 100;
+  position: relative;
+  z-index: 5;
+  margin-left: 1px;
+  background-size: 200% auto;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
+.highlight.active {
+  background-image: linear-gradient(90deg, #6290c8 50%, transparent 0);
+  color: white;
+  -webkit-animation: highlight 2s ease;
+  animation: 2s ease 0ms 1 normal none running highlight;
+}
+
+@-webkit-keyframes highlight {
+  0% {
+    background-position: 100% 100%;
+    color: inherit;
+  }
+  to {
+    background-position: 0 100%;
+    color: white;
+  }
+}
+@keyframes highlight {
+  0% {
+    background-position: 100% 100%;
+    color: inherit;
+  }
+  to {
+    background-position: 0 100%;
+    color: white;
+  }
+}
+
+/* Mobile Rules */
 @media (max-width: 767px) {
   h1 {
     font-size: 48px;
   }
 }
 
+/* Desktop Rules */
 @media (min-width: 768px) {
   h1 {
     font-size: 80px;
