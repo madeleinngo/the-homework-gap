@@ -25,6 +25,19 @@ h5 {
   color: white;
 }
 
+button {
+  display: block;
+  position: relative;
+  margin: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 48px;
+}
+
+button.active {
+  font-color: #6290c8;
+}
+
 /* Highlight Effect */
 .highlight {
   position: relative;
@@ -33,6 +46,7 @@ h5 {
   background-size: 200% auto;
   font-weight: bold;
   font-family: sans-serif;
+  font-size: 4rem;
 }
 
 .highlight.active {
@@ -40,6 +54,7 @@ h5 {
   color: white;
   -webkit-animation: highlight 2s ease;
   animation: 2s ease 0ms 1 normal none running highlight;
+  font-size: 4rem;
 }
 
 @-webkit-keyframes highlight {
@@ -66,7 +81,22 @@ h5 {
 /* Mobile Rules */
 @media (max-width: 767px) {
   h1 {
+    font-size: 96px;
+  }
+
+  p {
     font-size: 48px;
+  }
+
+  button {
+    width: 360px;
+    height: 84px;
+    font-size: 24px;
+  }
+
+  .content,
+  body {
+    padding: 60px;
   }
 }
 
@@ -75,8 +105,14 @@ h5 {
   h1 {
     font-size: 80px;
   }
+
   section {
     padding: 280px;
     padding-top: 48px;
+  }
+
+  button {
+    width: 480px;
+    height: 60px;
   }
 }

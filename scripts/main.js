@@ -42,6 +42,12 @@ let observer = new IntersectionObserver(intersectionHandler, options);
   observer.observe(span);
 });
 
+/* Button Transformation Effect */
+function toggleButton () {
+  document.querySelector("button").classList.toggle("active");
+  document.querySelector("button").addEventListener("click", toggleButton);
+}
+
 
 
 
