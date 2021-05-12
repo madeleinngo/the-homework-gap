@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/main.js" defer></script>
     <link rel="stylesheet" href="./styles/main.css" />
     <script
       src="https://kit.fontawesome.com/fbae6fef5a.js"
@@ -22,17 +22,20 @@
       </h1>
       <h1>But what happens when you don’t have access to that?</h1>
     </section>
-    <section class="door">
-      <h1>The Homework Gap</h1>
-      <div></div>
-      <div></div>
-      <button>Enter</button>
+    <section class="doors">
+      <div class="door left">
+        <h1>The Home</h1>
+      </div>
+      <div class="door right">
+        <h1>work Gap</h1>
+      </div>
+      <button class="enter button">Enter</button>
     </section>
     <section class="content">
       <article>
         <h4>Pre-Covid</h4>
-        <span class="highlight active">15%</span>
-        <h1 class="non-highlight">
+        <span class="highlight">15%</span>
+        <h1 class="non highlight">
           of school-age children say they cannot always finish homework because
           of the digital divide.
         </h1>
@@ -53,8 +56,8 @@
       </article>
       <article>
         <h4>The Covid Effect</h4>
-        <span class="highlight active">59%</span>
-        <h1 class="non-highlight">
+        <span class="highlight">59%</span>
+        <h1 class="non highlight">
           of U.S. parents with lower incomes say their child may face digital
           obstacles in schoolwork.
         </h1>

@@ -13,7 +13,7 @@ h1 {
   text-align: center;
 }
 
-.non-highlight {
+.non.highlight {
   margin: 0;
 }
 
@@ -27,6 +27,55 @@ h4 {
 
 h5 {
   color: white;
+}
+
+.doors {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  pointer-events: all;
+}
+
+.door {
+  position: absolute;
+  top: 0;
+  transform: translateX(0);
+  transition: transform 1s;
+  display: flex;
+  align-items: center;
+  border-color: white;
+  border-width: 5px;
+  width: 50%;
+  min-height: 100vh;
+  z-index: 3;
+}
+
+.door.left {
+  left: 0;
+  justify-content: flex-end;
+}
+
+.doors.active .door.left {
+  transform: translateX(-100%);
+}
+
+.door.right {
+  right: 0;
+}
+
+.doors.active .door.right {
+  transform: translateX(100%);
+}
+.enter.button {
+  z-index: 2;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100vh;
+  overflow: scroll;
 }
 
 button {

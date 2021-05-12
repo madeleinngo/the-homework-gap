@@ -1,27 +1,21 @@
 
-/* Intersection Observer Constuctor and callback function */
-
-function createObserver() {
-  let observer;
+/* Intersection Observer Constructor and callback function */
 
   let options = {
     root: null,
     threshold: 0.25
   }; 
 
-  let observer = new IntersectionObserver(callback, options);
-} 
 
-/* Handling intersection changes*/
+/* Handling intersection changes */
 
 function intersectionHandler(entries, observer) {
   entries.forEach(entry => {
       //   entry.isIntersecting]
       if (entry.isIntersecting) {
           // active if intersecting
-          function toggleHighlight() {
-            document.querySelector("span.highlight").classList.toggle("active");
-          }
+            entry.target.classList.add("active");
+            console.log(entry.target)
       } else {
           // remove active if no longer intersecting 
           entry.target.classList.remove("active");
@@ -34,20 +28,14 @@ let observer = new IntersectionObserver(intersectionHandler, options);
 
  /* Targeting highlight to be observed */
 
- let target = document.querySelectorAll("span.highlight");
+ let spans = document.querySelectorAll("span.highlight");
+console.log(spans)
 
  /* Observe each highlighted span */
 
- images.forEach((span) => {
+ spans.forEach((span) => {
   observer.observe(span);
 });
-
-/* Button Transformation Effect */
-function toggleButton () {
-  document.querySelector("button").classList.toggle("active");
-  document.querySelector("button").addEventListener("click", toggleButton);
-}
-
 
 
 
