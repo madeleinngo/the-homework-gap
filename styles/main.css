@@ -10,6 +10,11 @@ h1 {
   color: white;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .landing {
   text-align: center;
   overflow: hidden;
@@ -31,12 +36,21 @@ h5 {
   color: white;
 }
 
+nav {
+  z-index: 6;
+  color: white;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  width: 200%;
+}
+
 .doors {
   min-height: 100vh;
   min-width: 100vw;
   position: relative;
   pointer-events: all;
-  z-index: 6;
+  z-index: 10;
 }
 
 .door {
@@ -79,7 +93,7 @@ h5 {
 .enter.button {
   z-index: 2;
   position: relative;
-  bottom: 0px;
+  bottom: 0;
   justify-content: center;
   align-items: center;
 }
@@ -90,6 +104,7 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 48px;
+  border: none;
   margin: auto;
 }
 
@@ -152,17 +167,18 @@ figure {
 /* Mobile Rules */
 @media (max-width: 767px) {
   h1 {
-    font-size: 20px;
+    font-size: 36px;
   }
 
   p {
-    font-size: 48px;
+    font-size: 24px;
+    line-height: 1.5;
   }
 
   button {
     width: 100%;
     max-width: 360px;
-    height: 84px;
+    height: 60px;
     font-size: 24px;
   }
 }
