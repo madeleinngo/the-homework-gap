@@ -13,7 +13,6 @@ h1 {
 .landing {
   text-align: center;
   overflow: hidden;
-  min-width: 100vw;
 }
 
 .non.highlight {
@@ -37,7 +36,7 @@ h5 {
   min-width: 100vw;
   position: relative;
   pointer-events: all;
-  z-index: 1;
+  z-index: 6;
 }
 
 .door {
@@ -51,6 +50,8 @@ h5 {
   border-color: white;
   border-width: 5px;
   width: 50%;
+  border-top: none;
+  border-bottom: none;
   min-height: 100vh;
 }
 
@@ -83,14 +84,6 @@ h5 {
   align-items: center;
 }
 
-.content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-height: 100vh;
-  overflow: scroll;
-}
-
 button {
   display: block;
   position: relative;
@@ -101,7 +94,7 @@ button {
 }
 
 button.active {
-  font-color: #6290c8;
+  color: #6290c8;
 }
 
 figure > img {
@@ -110,6 +103,7 @@ figure > img {
   justify-content: center;
   display: block;
   margin: auto;
+  max-width: 75%;
 }
 
 figure {
@@ -124,7 +118,7 @@ figure {
   background-size: 200% auto;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .highlight.active {
@@ -132,7 +126,6 @@ figure {
   color: white;
   -webkit-animation: highlight 2s ease;
   animation: 2s ease 0ms 1 normal none running highlight;
-  font-size: 4rem;
 }
 
 @-webkit-keyframes highlight {
@@ -159,7 +152,7 @@ figure {
 /* Mobile Rules */
 @media (max-width: 767px) {
   h1 {
-    font-size: 96px;
+    font-size: 20px;
   }
 
   p {
@@ -167,14 +160,10 @@ figure {
   }
 
   button {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 84px;
     font-size: 24px;
-  }
-
-  .content,
-  body {
-    padding: 60px;
   }
 }
 
@@ -189,9 +178,11 @@ figure {
     line-height: 1.6;
   }
 
-  section {
-    padding: 280px;
+  section.content {
+    /* padding: 280px; */
     padding-top: 48px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   button {
@@ -210,5 +201,18 @@ figure {
     max-width: 480px;
     margin-top: 48px;
     margin-bottom: 60px;
+    max-width: 75%;
   }
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100vh;
+  overflow: scroll;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
