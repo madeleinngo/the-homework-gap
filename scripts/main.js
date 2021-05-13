@@ -37,6 +37,16 @@ console.log(spans)
   observer.observe(span);
 });
 
+/* Doors Animation Effect */
+
+function openDoors() {
+  document.querySelector(".doors").classList.add("active");
+  setTimeout(() => {
+    document.querySelector(".doors").style.display = "none";
+    document.querySelector("button").style.display = "none";
+    document.querySelector(".landing").style.display = "none";
+  }, 1000);
+}
 
 
  
