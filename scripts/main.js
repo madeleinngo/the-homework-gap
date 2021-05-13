@@ -44,7 +44,6 @@ function openDoors() {
   setTimeout(() => {
     document.querySelector(".doors").style.display = "none";
     document.querySelector("button").style.display = "none";
-    document.querySelector(".landing").style.display = "none";
   }, 1000);
 }
 

@@ -12,8 +12,8 @@ h1 {
 
 .landing {
   text-align: center;
-  z-index: 5;
   overflow: hidden;
+  min-width: 100vw;
 }
 
 .non.highlight {
@@ -34,6 +34,7 @@ h5 {
 
 .doors {
   min-height: 100vh;
+  min-width: 100vw;
   position: relative;
   pointer-events: all;
   z-index: 1;
